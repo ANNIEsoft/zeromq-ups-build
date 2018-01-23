@@ -62,7 +62,8 @@ ExternalProject_Get_Property(zeromq source_dir)
 
 # Use CMake to install the files since it is aware of the ups product
 # layout defined by cetbuildtools
-install(DIRECTORY ${binary_dir}/lib DESTINATION ${${product}_lib_dir}/..)
+install(DIRECTORY ${binary_dir}/../temp-install/lib
+  DESTINATION ${${product}_lib_dir}/..)
 install(DIRECTORY ${source_dir}/include DESTINATION ${${product}_inc_dir}/..)
 install(FILES ${source_dir}/README.md ${source_dir}/COPYING
   DESTINATION ${product}/${version})

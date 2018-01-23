@@ -14,19 +14,15 @@ cetbuildtools	v5_14_00	-	only_for_build
 end_product_list
  
 # e14  - with gcc 6.3.0 and -std=c++14
-qualifier	root	 	notes
-e14:debug	e14:nu:debug
-e14:opt		e14:nu:opt
-e14:prof	e14:nu:prof
+qualifier	cetbuildtools	notes
+e14:debug	     -
+e14:opt              -
+e14:prof             -
 end_qualifier_list
 
 # this is a table file fragment
 # it will be copied verbatim
 table_fragment_begin
-      # Add zeromq library directory to the default library search path for GCC
-      pathPrepend(LIBRARY_PATH, ${${UPS_PROD_NAME_UC}_LIB})
-      # Add zeromq include directory to the default include search path for GCC
-      pathPrepend(CPLUS_INCLUDE_PATH, ${${UPS_PROD_NAME_UC}_INC})
 table_fragment_end
 
 # Preserve tabs and formatting in emacs and vi / vim:
